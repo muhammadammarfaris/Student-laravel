@@ -10,8 +10,6 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
-
-        <a href="/student/create" class="btn btn-primary mb-3">ADD</a>
         
         <div class="table-responsive">
             <table class="table table-bordered table-hover text-center align-middle">
@@ -37,11 +35,6 @@
                             <td>
                                 <div class="btn-group" role="group">
                                     <a href="/student/detail/{{ $student->id }}" class="btn btn-outline-primary">Detail</a>
-                                    <a href="/student/edit/{{ $student->id }}" class="btn btn-outline-warning">Edit</a>
-                                    <form action="/student/delete/{{ $student->id }}" method="post">
-                                        @method('delete')
-                                        @csrf
-                                        <button class="btn btn-outline-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')">Delete</button>
                                     </form>
                                 </div>
                             </td> 

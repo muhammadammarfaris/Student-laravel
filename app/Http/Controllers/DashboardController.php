@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
+    public function index()
+    {
+        $title = "Dashboard"; 
+        return view('dashboard.all.all', compact('title'));
+    }
+
     public function all()
     {
         if(!Auth::check()) return redirect()->route('student.all');

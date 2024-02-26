@@ -92,8 +92,7 @@ Route::group(['prefix' => '/dashboard'], function () {
 }); 
 
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
-    Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');   
 });
 
 
